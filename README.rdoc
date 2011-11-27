@@ -1,3 +1,9 @@
 = Placeable
 
 This project rocks and uses MIT-LICENSE.
+
+== Installation
+
+add the following line inside the draw block in your /config/routes.rb file:
+
+mount Placeable::Engine => "/placeable"
