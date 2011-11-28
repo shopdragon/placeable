@@ -5,8 +5,13 @@ source "http://rubygems.org"
 # development dependencies will be added by default to the :development group.
 gemspec
 
-# jquery-rails is used by the dummy application
+# gems used by the dummy application
 gem "jquery-rails"
+gem "rspec-rails"
+gem "haml"
+gem "compass"
+gem "sass-rails"
+gem "factory_girl"
 
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
@@ -14,4 +19,4 @@ gem "jquery-rails"
 # your gem to rubygems.org.
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+# gem "ruby-debug19", :require => "ruby-debug"
