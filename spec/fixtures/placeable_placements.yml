@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cell_name: MyString
+  cell_action: MyString
+  cell_params: MyText
+  context_controller: MyString
+  context_action: MyString
+  context_id: 1
+  slot_name: MyString
+  position: 1
+  goes_up_at: 2011-11-27 16:45:32
+  comes_down_at: 2011-11-27 16:45:32
+
+two:
+  cell_name: MyString
+  cell_action: MyString
+  cell_params: MyText
+  context_controller: MyString
+  context_action: MyString
+  context_id: 1
+  slot_name: MyString
+  position: 1
+  goes_up_at: 2011-11-27 16:45:32
+  comes_down_at: 2011-11-27 16:45:32

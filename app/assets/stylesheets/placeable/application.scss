@@ -1,0 +1,42 @@
+// framework imports
+@import "compass";
+@import "compass/layout";
+@import "compass/reset";
+@import "blueprint";
+
+// application imports
+@import "colors";
+
+html {
+  height: 100%;
+}
+
+body {
+  background: $spread_background_color;
+  min-height: 100%;
+  padding: 0;
+}
+
+#spread {
+  background: $spread_background_color;
+  padding: 0;
+  #page_container {
+    @include container;
+    width: 960px;
+    border: 1px solid blue;
+    background: $page_container_background_color;
+    #page_header {
+    }
+    #page_main {
+    }
+    #page_footer {
+    }
+  }
+}
+
+.two-col {
+  .sidebar {
+  }
+  .main {
+  }
+}

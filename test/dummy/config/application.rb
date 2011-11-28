@@ -42,11 +42,17 @@ module Dummy
     config.assets.version = '1.0'
 
     config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :haml
       g.test_framework :rspec, :views => false, :fixture => true
       g.fixture_replacement :factory_girl, :dir => 'spec/factories'
-      g.form_builder :simple_form
-      g.template_engine :haml
     end
 
+    # SASS / scss / compass
+    config.sass.load_paths << "#{Rails.root}/app/assets/stylesheets"
+    config.sass.load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/compass/stylesheets"
+    config.sass.load_paths << "#{Gem.loaded_specs['compass'].full_gem_path}/frameworks/blueprint/stylesheets"
+
   end
+
 end

@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title
+      Placeable
+    = stylesheet_link_tag    "placeable/application"
+    = javascript_include_tag "placeable/application"
+    = csrf_meta_tags
+  %body
+    #spread
+      #page_container
+        = yield

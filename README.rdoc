@@ -4,6 +4,14 @@ This project rocks and uses MIT-LICENSE.
 
 == Installation
 
-add the following line inside the draw block in your /config/routes.rb file:
+add the following to your Gemfile:
 
-mount Placeable::Engine => "/placeable"
+  gem "placeable"
+
+add the following inside the draw block in your /config/routes.rb file:
+
+  mount Placeable::Engine => "/placeable", :as => "placeable_engine"
+
+run the following from the command line in the root directory of your application:
+
+  rake placeable:install:migrations
