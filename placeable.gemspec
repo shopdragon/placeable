@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = Placeable::VERSION
   s.authors     = ["Robert Head"]
   s.email       = ["robert.head@gmail.com"]
-  s.homepage    = "shopdragon.com"
+  s.homepage    = "http://shopdragon.com/"
   s.summary     = "Placeable is a CMS for placing cells into a layout in Rails 3.x"
   s.description = "Placeable is a CMS for placing cells into a layout in Rails 3.x"
 
