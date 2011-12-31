@@ -6,6 +6,12 @@
     = stylesheet_link_tag    "placeable/application"
     = javascript_include_tag "placeable/application"
     = csrf_meta_tags
+
+    = stylesheet_link_tag "placeable/screen.css", :media => 'screen, projection'
+    = stylesheet_link_tag "placeable/print.css", :media => 'print'
+    /[if lt IE 8]
+      = stylesheet_link_tag 'placeable/ie.css', :media => 'screen, projection'
+
   %body
     #spread
       #page_container

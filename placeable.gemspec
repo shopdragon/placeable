@@ -7,11 +7,11 @@ require "placeable/version"
 Gem::Specification.new do |s|
   s.name        = "placeable"
   s.version     = Placeable::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
+  s.authors     = ["Robert Head"]
+  s.email       = ["robert.head@gmail.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Placeable."
-  s.description = "TODO: Description of Placeable."
+  s.summary     = "Placeable is a CMS for placing cells into a layout in Rails 3.x"
+  s.description = "Placeable is a CMS for placing cells onto a layout in Rails 3.x"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]

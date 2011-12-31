@@ -1,35 +1,90 @@
-// framework imports
-@import "compass";
-@import "compass/layout";
-@import "compass/reset";
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+// To configure blueprint, edit the partials/base.sass file.
+@import "partials/base";
+
+// Import all the default blueprint modules so that we can access their mixins.
 @import "blueprint";
+
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
 
 // application imports
 @import "colors";
+
+
+// If you are doing a lot of stylesheet concatenation, it is suggested
+// that you scope your blueprint styles, so that you can better control
+// what pages use blueprint when stylesheets are concatenated together.
+body.bp {
+  @include blueprint-typography(true);
+  @include blueprint-utilities;
+  @include blueprint-debug;
+  @include blueprint-interaction;
+  // Remove the scaffolding when you're ready to start doing visual design.
+  // Or leave it in if you're happy with how blueprint looks out-of-the-box
+}
+
+form.bp {
+  @include blueprint-form;
+  // You'll probably want to remove the scaffolding once you start styling your site.
+  @include blueprint-scaffolding; }
+
+// Application-specific styles
+
+@import "application";
+
+// Page layout can be done using mixins applied to your semantic classes and IDs:
+body.two-col {
+  #container {
+    @include container;
+  }
+  #header, #footer {
+    @include column($blueprint-grid-columns); }
+  #sidebar {
+    // One third of the grid columns, rounding down. With 24 cols, this is 8.
+    $sidebar-columns: floor($blueprint-grid-columns / 3);
+    @include column($sidebar-columns); }
+  #content {
+    // Two thirds of the grid columns, rounding up.
+    // With 24 cols, this is 16.
+    $content-columns: ceil(2 * $blueprint-grid-columns / 3);
+    // true means it's the last column in the row
+    @include column($content-columns, true); } }
+
+
+
+
+
+
+
 
 html {
   height: 100%;
 }
 
 body {
-  background: $spread_background_color;
+  background-color: $spread_background_color;
   min-height: 100%;
   padding: 0;
 }
 
 #spread {
-  background: $spread_background_color;
+  background-color: $spread_background_color;
   padding: 0;
   #page_container {
     @include container;
     width: 960px;
-    border: 1px solid blue;
     background: $page_container_background_color;
     #page_header {
+      @include column(24);
     }
     #page_main {
+      @include column(24);
     }
     #page_footer {
+      @include column(24);
     }
   }
 }
