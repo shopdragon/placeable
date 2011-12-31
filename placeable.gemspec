@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Placeable::VERSION
   s.authors     = ["Robert Head"]
   s.email       = ["robert.head@gmail.com"]
-  s.homepage    = "TODO"
+  s.homepage    = "shopdragon.com"
   s.summary     = "Placeable is a CMS for placing cells into a layout in Rails 3.x"
-  s.description = "Placeable is a CMS for placing cells onto a layout in Rails 3.x"
+  s.description = "Placeable is a CMS for placing cells into a layout in Rails 3.x"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
